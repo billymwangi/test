@@ -2,15 +2,30 @@
 
 ## Project Overview
 
-For this project, i conducted exploratory data analysis to generate insights for a business stakeholders.
-
-### Business Problem
+For this project, i conducted exploratory data analysis on data from the movie industry to generate insights for business stakeholders.
 
 
+* This file contains these sections:
+       * Overview
+       * Business Understanding
+          * Include stakeholder and key business questions
+       * Data Understanding and Analysis
+          * Source of data
+          * Description of data
+          * Three visualizations (the same visualizations presented in the slides and notebook)
+       * Conclusion
+          * Summary of conclusions including three relevant findings
 
+### Business Understanding
+The movie industry includes a number of stakeholders namely investors, movie studios, directors, producers, actors, writers, supporting staff and the fanbase or audience. Some of the business questions that might arise in the movie industry includes:-
+- How investors can evaluate different movie studios depending on their revenues
+- How ratings affect or are affected by different aspects of a movie
+-
 
-### The Data
+### Data Understanding and Analysis
 
+#### The Data
+The data used for analysis is included in the `zippedData` folder
 In the folder `zippedData` are movie datasets from:
 
 * `im.db.zip`
@@ -18,12 +33,30 @@ In the folder `zippedData` are movie datasets from:
   * `movie_basics` and `movie_ratings` tables are most relevant
 * `bom.movie_gross.csv.gz`
   * Compressed CSV file (you can open without expanding the file using `pd.read_csv`)
-  
+
 Because it was collected from various locations, the different files have different formats. Some are compressed CSV (comma-separated values) that can be opened using spreadsheet software or `pd.read_csv`, while the data from IMDB is located in a SQLite database.
 
 ![movie data erd](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-1-project-v2-4/master/movie_data_erd.jpeg)
 
 Note that the above diagram shows ONLY the IMDB data. 
+
+#### Data Cleaning & Data Analysis
+For the `movie_ratings` and `movie_basics` data, I started by cleaning the data. I dropped the rows with missing values after using the `genres` column and `original_title`. These missing values were few and would therefore not have impacted my analysis. I then replaced the missing values in the `runtime_minutes` column with the mean since it was the best measure of central tendency and the amount of missing values here was significant, so it would have been imprudent to drop the rows with missing values.
+
+I then merged the `movie_ratings` and `movie_basics` tables since they both had a similar column named `movie_id`. Afterwards i decided to introduce a new column named `new_rating` which was made by running a function to group the different average ratings for the movies into three categories i.e. low, average and high. 
+
+I then analysed the data to see the relationship between the runtime and ratings & the relationship between the number of votes and the ratings.
+
+##### Relationship between the runtime and ratings
+
+##### Relationship between the number of votes and the ratings
+
+
+For the `movie_gross` data, I started by cleaning the data. I dropped dropped the `foreign_gross` column since it contained a huge amount of missing data making it not useful for data analysis. I then dropped the rows associated with the missing values in the `domestic_gross` column since they were just few they could be ignored and still result in good data analysis.
+
+Afterwards i analysed the relationship showing the domestic gross performance of the top ten movie studios over the years. 
+  
+##### Relationship showing the domestic gross performance of the top ten movie studios over the years
 
 
 ### Key Points
@@ -44,25 +77,6 @@ Note that the above diagram shows ONLY the IMDB data.
 * Visualization
 * Code Quality
 
-See the [Grading](#grading) section for further explanation of these elements.
-
-### GitHub Repository
-
-The GitHub repository is the cloud-hosted directory containing all of your project files as well as their version history.
-
-This repository link will be the project link that you include on your resume, LinkedIn, etc. for prospective employers to view your work. Note that we typically recommend that 3 links are highlighted (out of 5 projects) so don't stress too much about getting this one to be perfect! There will also be time after graduation for cosmetic touch-ups.
-
-A professional GitHub repository has:
-
-
-2. Commit history
-   * Progression of updates throughout the project time period, not just immediately before the deadline
-   * Clear commit messages
-   * Commits from all team members (if a group project)
-3. Organization
-   * Clear folder structure
-   * Clear names of files and folders
-   * Easily-located notebook and presentation linked in the README
 
 
 
