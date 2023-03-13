@@ -69,7 +69,7 @@ From the relationship between the runtimes and ratings we can conclude that So a
 
 From the relationship between the number of votes and the ratings we can conclude that if movie studios or producers would want their movies to be highly rated then it`s best to look at producing films that already have a fan base. This is evident in how movie studios go for books or comic books that already have a huge fan base. It is also the reason why movie studios sometimes reenact and produce sequels to their movies.
 
-From the relationship showing the domestic gross performance of the top ten movie studios over the years we can conclude that For investors looking to invest in movie studios, this visualization can be further analyzed to look at the studios that have maintained their earnings year over year before making an investment. A high domestic gross revenue would most likely lead to rising cashflows and hence a rising stock price.
+From the relationship showing the domestic gross performance of the top ten movie studios over the years we can conclude that For investors looking to invest in movie studios, this visualization can be further analyzed to look at the studios that have maintained their earnings year over year before making an investment. A high domestic gross revenue would most likely lead to rising cashflows and hence a rising stock price. If you are a film director getting the top ten movie studios to back you will most probably lead to your film grossing highly since backing of a studio with high cashflows might lead the studio to spend more money to make a better quality film and also in marketing the film.
 
 
 
